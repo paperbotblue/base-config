@@ -1,0 +1,38 @@
+------------------------/
+wifi connection :
+	UNO : Te@m_ _Snapch@t ,925  (0.0),  
+------------------------/
+
+	#turn on wifi
+		nmcli radio wifi on
+	#listing nearby wifi
+		nmcli device wifi list
+	#connecting with UUID
+		sudo nmcli --ask dev wifi connect UUID
+
+-------------------------/
+bluetooth connection:
+-------------------------/
+
+	#going into bluetoothctl
+		bluetoothctl
+	#scaning nearby devices 
+		scan on
+	#pairing 
+		pair DEVICE_MAC
+	#connecting 
+		connect DEVICE_MAC
+
+-------------------------/
+if bluetooth not working
+-------------------------/
+
+  #sudo pacman -S bluez bluez-tools
+
+-------------------------/
+if sound not comming from bluetooth
+-------------------------/
+
+  #go into pavcontrol > config > turn off family
+
+
